@@ -46,7 +46,7 @@
         Web Audio API 1.0 Implementation Report
       </h1>
       <h2>
-        2021-Feb-04
+        2021-Feb-16
       </h2>
       <hr>
     </div>
@@ -71,9 +71,11 @@
           bugtracker</a>.
         </p>
         <p>
-          Apple notes that they have partial support, and their implementation lags behind the specification.
-          However, in September 2020, <a href="https://webkit.org/blog/11294/release-notes-for-safari-technology-preview-113/">Safari
-          Technical Preview 113</a> included improved Web Audio support.
+          WebKit was one of the earliest implementations,
+          initially behind a vendor prefix.
+          From September 2020, <a href="https://webkit.org/blog/11294/release-notes-for-safari-technology-preview-113/">Safari
+          Technical Preview 113</a> included improved Web Audio support and these improvements have now
+          taken the implementation to an excellent level.
         </p>
         <h3 id="blink">
           Blink
@@ -93,7 +95,7 @@
           The Blink implementation postdates the Webkit/Blink split, and should
           be considered a separate implementation. Blink has a <a href=
           "https://bugs.chromium.org/p/chromium/issues/list?can=2&amp;q=webaudio&amp;x=m&amp;y=releaseblock&amp;cells=ids">
-          bugtracker</a>.
+          bugtracker</a>. The overall implementation level is excellent.
         </p>
         <h3 id="gecko">
           Firefox
@@ -104,7 +106,7 @@
           "https://platform-status.mozilla.org/#webaudio">version 23 onwards
           unprefixed</a>. Gecko has a <a href=
           "https://bugzilla.mozilla.org/enter_bug.cgi?product=Core&amp;component=Web%20Audio">
-          bugtracker</a>.
+          bugtracker</a>. The overall implementation level is very good.
         </p>
         <h3 id="edge">
           Edge
@@ -150,7 +152,7 @@
             Safari
           </td>
           <td>
-            119 preview, macOS 10.15
+            123 preview, macOS 10.15
           </td>
           <td>
             1115
@@ -164,7 +166,7 @@
             Chrome
           </td>
           <td>
-            90, Linux 20.04
+            91, Linux 20.04
           </td>
           <td>
             1115
@@ -178,7 +180,7 @@
             Firefox
           </td>
           <td>
-            87, Linux 20.04
+            89, Linux 20.04
           </td>
           <td>
             1092
@@ -192,7 +194,7 @@
             Edge
           </td>
           <td>
-            90, Windows 10.0
+            91, Windows 10.0
           </td>
           <td>
             1115
@@ -322,13 +324,13 @@
             Safari
           </td>
           <td>
-            119 preview, macOS 10.15
+            123 preview, macOS 10.15
           </td>
           <td>
-            6470
+            6478
           </td>
           <td>
-            77
+            87
           </td>
         </tr>
         <tr>
@@ -336,13 +338,13 @@
             Chrome
           </td>
           <td>
-            90, Linux 20.04
+            91, Linux 20.04
           </td>
           <td>
-            6557
+            6571
           </td>
           <td>
-            48
+            46
           </td>
         </tr>
         <tr>
@@ -350,13 +352,13 @@
             Firefox
           </td>
           <td>
-            87, Linux 20.04
+            89, Linux 20.04
           </td>
           <td>
-            5694
+            5705
           </td>
           <td>
-            409
+            410
           </td>
         </tr>
         <tr>
@@ -364,13 +366,13 @@
             Edge
           </td>
           <td>
-            90, Windows 10.0
+            91, Windows 10.0
           </td>
           <td>
-            6557
+            6570
           </td>
           <td>
-            48
+            47
           </td>
         </tr>
       </table>
