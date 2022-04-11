@@ -9,7 +9,7 @@
   <meta content="Bikeshed version fb1e763a4, updated Tue Mar 1 13:13:50 2022 -0800" name="generator">
   <link href="https://www.w3.org/TR/webaudio/" rel="canonical">
   <link href="favicon.png" rel="icon">
-  <meta content="20d56a9e86dcf2ca468bd19239769a4970a6fc01" name="document-revision">
+  <meta content="c5b5d92d339d2d9ea2f9b74e9e26ae3a049673b5" name="document-revision">
   <link as="script" href="https://www.w3.org/scripts/MathJax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" rel="preload">
   <link as="script" href="https://www.w3.org/scripts/MathJax/2.7.5/jax/output/HTML-CSS/jax.js?rev=2.7.5" rel="preload">
   <link as="script" href="https://www.w3.org/scripts/MathJax/2.7.5/jax/output/HTML-CSS/fonts/STIX/fontdata.js?rev=2.7.5" rel="preload">
@@ -821,7 +821,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Web Audio API</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2022-03-30">30 March 2022</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2022-04-11">11 April 2022</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -1521,6 +1521,7 @@ window.addEventListener('load', (event) => {
   ListAmendments("c2373", "Proposed Correction", "change-list-2373");
   ListAmendments("c2321", "Proposed Correction", "change-list-2321");
   ListAmendments("c2375", "Proposed Correction", "change-list-2375");
+  ListAmendments("c2475", "Proposed Addition", "change-list-2475");
 });
 </script>
    <h2 class="no-num heading settled" id="introductory"><span class="content"> Introduction</span></h2>
@@ -1683,7 +1684,7 @@ input signal.</p>
    <p>The interfaces defined are:</p>
    <ul>
     <li data-md>
-     <p>An <a class="dfnref" href="#AudioContext" id="ref-for-AudioContext①④②">AudioContext</a> interface, which contains an audio signal graph representing
+     <p>An <a class="dfnref" href="#AudioContext" id="ref-for-AudioContext①④③">AudioContext</a> interface, which contains an audio signal graph representing
 connections between <code class="idl"><a data-link-type="idl" href="#AudioNode" id="ref-for-AudioNode④">AudioNode</a></code>s.</p>
     <li data-md>
      <p>An <code class="idl"><a data-link-type="idl" href="#AudioNode" id="ref-for-AudioNode⑤">AudioNode</a></code> interface, which represents
@@ -2879,7 +2880,7 @@ resources, after which it cannot be used or resumed again.</p>
    <p class="note" role="note"><span>Note:</span> For example, this can involve waiting for the audio callbacks to
 fire regularly, or to wait for the hardware to be ready for
 processing.</p>
-   <h3 class="heading settled dfn-paneled idl-code" data-dfn-type="interface" data-export data-level="1.2" data-lt="AudioContext" id="AudioContext"><span class="secno">1.2. </span><span class="content"> The <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①①">AudioContext</a></code> Interface</span><a class="self-link" href="#AudioContext" id="ref-for-AudioContext①④③"></a></h3>
+   <h3 class="heading settled dfn-paneled idl-code" data-dfn-type="interface" data-export data-level="1.2" data-lt="AudioContext" id="AudioContext"><span class="secno">1.2. </span><span class="content"> The <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①①">AudioContext</a></code> Interface</span><a class="self-link" href="#AudioContext" id="ref-for-AudioContext①④④"></a></h3>
    <div class="mdn-anno wrapped after">
     <button class="mdn-anno-btn"><b class="all-engines-flag" title="This feature is in all current engines.">✔</b><span>MDN</span></button>
     <div class="feature">
@@ -3620,7 +3621,7 @@ BaseAudioContext’s <code class="idl"><a data-link-type="idl" href="#dom-baseau
     <dd data-md>
      <p>Represents a point in the time coordinate system of a <code>Performance</code> interface implementation (described in <a data-link-type="biblio" href="#biblio-hr-time-3">[hr-time-3]</a>).</p>
    </dl>
-   <h3 class="heading settled dfn-paneled idl-code" data-dfn-type="interface" data-export data-level="1.3" data-lt="OfflineAudioContext" id="OfflineAudioContext"><span class="secno">1.3. </span><span class="content"> The <code class="idl"><a data-link-type="idl" href="#OfflineAudioContext" id="ref-for-OfflineAudioContext③">OfflineAudioContext</a></code> Interface</span><a class="self-link" href="#OfflineAudioContext" id="ref-for-OfflineAudioContext④⓪"></a></h3>
+   <h3 class="heading settled dfn-paneled idl-code" data-dfn-type="interface" data-export data-level="1.3" data-lt="OfflineAudioContext" id="OfflineAudioContext"><span class="secno">1.3. </span><span class="content"> The <code class="idl"><a data-link-type="idl" href="#OfflineAudioContext" id="ref-for-OfflineAudioContext③">OfflineAudioContext</a></code> Interface</span><a class="self-link" href="#OfflineAudioContext" id="ref-for-OfflineAudioContext④①"></a></h3>
    <div class="mdn-anno wrapped after">
     <button class="mdn-anno-btn"><b class="all-engines-flag" title="This feature is in all current engines.">✔</b><span>MDN</span></button>
     <div class="feature">
@@ -14766,19 +14767,44 @@ the <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="render-quantu
 given thread can only be executed when no other <a data-link-type="dfn" href="#atomically" id="ref-for-atomically②">atomic</a> operation is running on another thread.</p>
    <p>The algorithm for rendering a block of audio from a <code class="idl"><a data-link-type="idl" href="#BaseAudioContext" id="ref-for-BaseAudioContext①⓪③">BaseAudioContext</a></code> <em>G</em> with a <a href="#control-message-queue" id="ref-for-control-message-queue①②">control message queue</a> <em>Q</em> is comprised of multiple steps and explained in further detail
 in the algorithm of <a href="#rendering-a-graph">rendering a graph</a>.</p>
-   <div class="note" role="note">
-     In practice, the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③②">AudioContext</a></code> <a data-link-type="dfn" href="#rendering-thread" id="ref-for-rendering-thread①⑨">rendering thread</a> is
-	often running off a system-level audio callback, that executes in
-	an isochronous fashion. 
-    <p>An <code class="idl"><a data-link-type="idl" href="#OfflineAudioContext" id="ref-for-OfflineAudioContext③⑦">OfflineAudioContext</a></code> is not required to have a
-	system-level audio callback, but behaves as if it did with the
-	callback happening as soon as the previous callback is
-	finished.</p>
+   <div class="correction proposed" id="c2475-1">
+     <span class="marker">Proposed Addition <a href="https://github.com/WebAudio/web-audio-api/issues/2475">Issue
+			2375</a>. </span> Add definition for various concepts related to system-level audio callbacks 
+    <div class="amendment-buttons"> Buttons here </div>
+    <ins cite="#c2475">
+      The <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③②">AudioContext</a></code> <a data-link-type="dfn" href="#rendering-thread" id="ref-for-rendering-thread①⑨">rendering thread</a> is driven by a <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="system-level-audio-callback">system-level audio callback</dfn>, that is periodically 
+		at regular intevals. Each call has a <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="system-level audio callback buffer size" data-noexport id="system-level-audio-callback-buffer-size">system-level audio callback buffer
+		size</dfn>, which is a varying number of sample-frames that needs to be
+		computed on time before the next <a data-link-type="dfn" href="#system-level-audio-callback" id="ref-for-system-level-audio-callback">system-level audio callback</a> arrives. 
+     <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="load-value">load value</dfn> is computed for each <a data-link-type="dfn" href="#system-level-audio-callback" id="ref-for-system-level-audio-callback①">system-level audio
+		callback</a>, by dividing its execution duration by the <a data-link-type="dfn" href="#system-level-audio-callback-buffer-size" id="ref-for-system-level-audio-callback-buffer-size">system-level
+		audio callback buffer size</a> divided by <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-samplerate" id="ref-for-dom-baseaudiocontext-samplerate①②">sampleRate</a></code>.</p>
+     <p>Ideally the <a data-link-type="dfn" href="#load-value" id="ref-for-load-value">load value</a> is below 1.0, meaning that it took less time
+		to render the audio that it took to play it out.  An <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="audio buffer underrun" data-noexport id="audio-buffer-underrun">audio buffer
+		underrun</dfn> happens when this <a data-link-type="dfn" href="#load-value" id="ref-for-load-value①">load value</a> is greater than 1.0: the
+		system could not render audio fast enough for real-time.</p>
+     <div class="note" role="note"> The <a data-link-type="dfn" href="#render-quantum-size" id="ref-for-render-quantum-size">render quantum size</a> for an audio graph is not necessarily a
+			divisor of the <a data-link-type="dfn" href="#system-level-audio-callback-buffer-size" id="ref-for-system-level-audio-callback-buffer-size①">system-level audio callback buffer size</a>. This causes
+			increased audio latencies and reduced possible maximum load without <a data-link-type="dfn" href="#audio-buffer-underrun" id="ref-for-audio-buffer-underrun">audio buffer underrun</a>. </div>
+     <p>Note that the concepts of <a data-link-type="dfn" href="#system-level-audio-callback" id="ref-for-system-level-audio-callback②">system-level audio callback</a> and <a data-link-type="dfn" href="#load-value" id="ref-for-load-value②">load
+		value</a> do not apply to <code class="idl"><a data-link-type="idl" href="#OfflineAudioContext" id="ref-for-OfflineAudioContext③⑦">OfflineAudioContext</a></code>s.</p>
+    </ins>
+    <del cite="#c2475">
+     <div class="note" role="note">
+       In practice, the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③③">AudioContext</a></code> <a data-link-type="dfn" href="#rendering-thread" id="ref-for-rendering-thread②⓪">rendering thread</a> is
+			often running off a system-level audio callback, that executes in
+			an isochronous fashion. 
+      <p>An <code class="idl"><a data-link-type="idl" href="#OfflineAudioContext" id="ref-for-OfflineAudioContext③⑧">OfflineAudioContext</a></code> is not required to have a
+			system-level audio callback, but behaves as if it did with the
+			callback happening as soon as the previous callback is
+			finished.</p>
+     </div>
+    </del>
    </div>
    <p>The audio callback is also queued as a task in the <a href="#control-message-queue" id="ref-for-control-message-queue①③">control message queue</a>. The UA MUST perform
 the following algorithms to process render quanta to fulfill such task by
 filling up the requested buffer size. Along with the <a data-link-type="dfn" href="#control-message-queue" id="ref-for-control-message-queue⑦">control message
-queue</a>, each <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③③">AudioContext</a></code> has a regular <a href="https://html.spec.whatwg.org/multipage/webappapis.html#task-queue">task
+queue</a>, each <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③④">AudioContext</a></code> has a regular <a href="https://html.spec.whatwg.org/multipage/webappapis.html#task-queue">task
 queue</a>, called its <dfn class="dfn-paneled" data-dfn-for="BaseAudioContext" data-dfn-type="dfn" data-noexport id="baseaudiocontext-associated-task-queue">associated task queue</dfn> for tasks that are posted to the rendering thread from the control thread. An
 additional microtask checkpoint is performed after processing a render quantum
 to run any microtasks that might have been queued during the execution of the <code>process</code> methods of <code class="idl"><a data-link-type="idl" href="#AudioWorkletProcessor" id="ref-for-AudioWorkletProcessor④②">AudioWorkletProcessor</a></code>.</p>
@@ -15016,10 +15042,10 @@ resulting buffer.</p>
         <p><a data-link-type="dfn" href="#atomically" id="ref-for-atomically④">Atomically</a> perform the following steps:</p>
         <ol>
          <li data-md>
-          <p>Increment <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-current-frame-slot" id="ref-for-dom-baseaudiocontext-current-frame-slot①">[[current frame]]</a></code> by the <a data-link-type="dfn" href="#render-quantum-size" id="ref-for-render-quantum-size">render quantum size</a>.</p>
+          <p>Increment <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-current-frame-slot" id="ref-for-dom-baseaudiocontext-current-frame-slot①">[[current frame]]</a></code> by the <a data-link-type="dfn" href="#render-quantum-size" id="ref-for-render-quantum-size①">render quantum size</a>.</p>
          <li data-md>
           <p>Set <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-currenttime" id="ref-for-dom-baseaudiocontext-currenttime④⑥">currentTime</a></code> to <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-current-frame-slot" id="ref-for-dom-baseaudiocontext-current-frame-slot②">[[current frame]]</a></code> divided
-by <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-samplerate" id="ref-for-dom-baseaudiocontext-samplerate①②">sampleRate</a></code>.</p>
+by <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-samplerate" id="ref-for-dom-baseaudiocontext-samplerate①③">sampleRate</a></code>.</p>
         </ol>
        <li data-md>
         <p>Set <var>render result</var> to <code>true</code>.</p>
@@ -15050,16 +15076,16 @@ buffer</a> and the value(s) of the <code class="idl"><a data-link-type="idl" hre
 	document cleanup steps</a> are defined for documents that use <code class="idl"><a data-link-type="idl" href="#BaseAudioContext" id="ref-for-BaseAudioContext①①①">BaseAudioContext</a></code>: 
    <ol>
     <li data-md>
-     <p>Reject all the promises of <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-pending-promises-slot" id="ref-for-dom-baseaudiocontext-pending-promises-slot⑧">[[pending promises]]</a></code> with <code>InvalidStateError</code>, for each <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③④">AudioContext</a></code> and <code class="idl"><a data-link-type="idl" href="#OfflineAudioContext" id="ref-for-OfflineAudioContext③⑧">OfflineAudioContext</a></code> whose relevant global object is the same as
+     <p>Reject all the promises of <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-pending-promises-slot" id="ref-for-dom-baseaudiocontext-pending-promises-slot⑧">[[pending promises]]</a></code> with <code>InvalidStateError</code>, for each <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③⑤">AudioContext</a></code> and <code class="idl"><a data-link-type="idl" href="#OfflineAudioContext" id="ref-for-OfflineAudioContext③⑨">OfflineAudioContext</a></code> whose relevant global object is the same as
 the document’s associated Window.</p>
     <li data-md>
      <p>Stop all <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-decoding-thread" id="ref-for-dom-baseaudiocontext-decoding-thread①">decoding thread</a></code>s.</p>
     <li data-md>
-     <p><a data-link-type="dfn" href="#queuing" id="ref-for-queuing⑨">Queue a control message</a> to <code class="idl"><a data-link-type="idl" href="#dom-audiocontext-close" id="ref-for-dom-audiocontext-close②">close()</a></code> the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③⑤">AudioContext</a></code> or <code class="idl"><a data-link-type="idl" href="#OfflineAudioContext" id="ref-for-OfflineAudioContext③⑨">OfflineAudioContext</a></code>.</p>
+     <p><a data-link-type="dfn" href="#queuing" id="ref-for-queuing⑨">Queue a control message</a> to <code class="idl"><a data-link-type="idl" href="#dom-audiocontext-close" id="ref-for-dom-audiocontext-close②">close()</a></code> the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③⑥">AudioContext</a></code> or <code class="idl"><a data-link-type="idl" href="#OfflineAudioContext" id="ref-for-OfflineAudioContext④⓪">OfflineAudioContext</a></code>.</p>
    </ol>
    <h2 class="heading settled" data-level="3" id="DynamicLifetime"><span class="secno">3. </span><span class="content"> Dynamic Lifetime</span><a class="self-link" href="#DynamicLifetime"></a></h2>
    <h3 class="informative heading settled" data-level="3.1" id="dynamic-lifetime-background"><span class="secno">3.1. </span><span class="content"> Background</span><a class="self-link" href="#dynamic-lifetime-background"></a></h3>
-   <p class="note" role="note"><span>Note:</span> The normative description of <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③⑥">AudioContext</a></code> and <code class="idl"><a data-link-type="idl" href="#AudioNode" id="ref-for-AudioNode②①⑤">AudioNode</a></code> lifetime characteristics is
+   <p class="note" role="note"><span>Note:</span> The normative description of <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③⑦">AudioContext</a></code> and <code class="idl"><a data-link-type="idl" href="#AudioNode" id="ref-for-AudioNode②①⑤">AudioNode</a></code> lifetime characteristics is
 	described by the <a href="#lifetime-AudioContext">AudioContext lifetime</a> and <a href="#AudioNode-actively-processing">AudioNode lifetime</a>.</p>
    <p><em>This section is non-normative.</em></p>
    <p>In addition to allowing the creation of static routing
@@ -15636,7 +15662,7 @@ animation frame-rates do. Depending on the application, a reasonable
 latency can be from as low as 3-6 milliseconds to 25-50 milliseconds.</p>
    <p>Implementations will generally seek to minimize overall latency.</p>
    <p>Along with minimizing overall latency, implementations will generally
-seek to minimize the difference between an <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③⑦">AudioContext</a></code>'s <code>currentTime</code> and an <code class="idl"><a data-link-type="idl" href="#AudioProcessingEvent" id="ref-for-AudioProcessingEvent⑤">AudioProcessingEvent</a></code>'s <code>playbackTime</code>.
+seek to minimize the difference between an <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③⑧">AudioContext</a></code>'s <code>currentTime</code> and an <code class="idl"><a data-link-type="idl" href="#AudioProcessingEvent" id="ref-for-AudioProcessingEvent⑤">AudioProcessingEvent</a></code>'s <code>playbackTime</code>.
 Deprecation of <code class="idl"><a data-link-type="idl" href="#ScriptProcessorNode" id="ref-for-ScriptProcessorNode①⑦">ScriptProcessorNode</a></code> will make this
 consideration less important over time.</p>
    <p>Additionally, some <code class="idl"><a data-link-type="idl" href="#AudioNode" id="ref-for-AudioNode②②⑤">AudioNode</a></code>s can add latency to some paths
@@ -15715,7 +15741,7 @@ persists across browsing sessions?</p>
     <li data-md>
      <p>Does this specification expose persistent, cross-origin state to
 the web?</p>
-     <p>Yes, the supported audio sample rate(s) and the output device channel count are exposed. See <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③⑧">AudioContext</a></code>.</p>
+     <p>Yes, the supported audio sample rate(s) and the output device channel count are exposed. See <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③⑨">AudioContext</a></code>.</p>
     <li data-md>
      <p>Does this specification expose any other data to an origin that it
 doesn’t currently have access to?</p>
@@ -15751,7 +15777,7 @@ to synchronise the audio generated by WebAudio to other
 audio or video sources or to visual cues (for example in a game, or an audio
 recording or music making environment). Excessive latency decreases usability and may be
 an accessibility issue.</p>
-     <p>Fingerprining via the sample rate of the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①③⑨">AudioContext</a></code> is also possible.  We
+     <p>Fingerprining via the sample rate of the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①④⓪">AudioContext</a></code> is also possible.  We
 recommend the following steps to be taken to minimize this:</p>
      <ol>
       <li data-md>
@@ -15772,7 +15798,7 @@ affordance to force use of the native rate—e.g. by setting a flag in
 the browser on the device. This setting would not be exposed in the API.</p>
       <li data-md>
        <p>It is also expected behavior that a different rate could be explicitly
-requested in the constructor for <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①④⓪">AudioContext</a></code> (this is already in the
+requested in the constructor for <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①④①">AudioContext</a></code> (this is already in the
 specification; it normally causes the audio rendering to be done at the
 requested sampleRate, and then up- or down-sampled to the device output),
 and if that rate is natively supported, the rendering could be passed
@@ -15781,7 +15807,7 @@ user intervention (although it’s not observable from Web Audio that the
 audio output is not downsampled on output)—for example, if <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/mediacapture-streams/#dom-mediadevices" id="ref-for-dom-mediadevices">MediaDevices</a></code> capabilities were read (with user intervention) and indicated
 a higher rate was supported.</p>
      </ol>
-     <p>Fingerprinting via the number of output channels for the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①④①">AudioContext</a></code> is possible as well.  We recommend that <code class="idl"><a data-link-type="idl" href="#dom-audiodestinationnode-maxchannelcount" id="ref-for-dom-audiodestinationnode-maxchannelcount④">maxChannelCount</a></code> be set to two
+     <p>Fingerprinting via the number of output channels for the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext①④②">AudioContext</a></code> is possible as well.  We recommend that <code class="idl"><a data-link-type="idl" href="#dom-audiodestinationnode-maxchannelcount" id="ref-for-dom-audiodestinationnode-maxchannelcount④">maxChannelCount</a></code> be set to two
 (stereo).  Stereo is by far the most common number of
 channels.</p>
     <li data-md>
@@ -15904,6 +15930,10 @@ JavaScript code used within this specification.</p>
     <li data-md>
      <p><a href="https://github.com/WebAudio/web-audio-api/issues/2375">Issue 2375</a>: decodeAudioData only decodes the first track of a multi-track audio file.</p>
      <div id="change-list-2375"></div>
+    <li data-md>
+     <p><a href="https://github.com/WebAudio/web-audio-api/issues/2475">Issue
+	2475</a>: Add definition for various concepts related to system-level audio callbacks</p>
+     <div id="change-list-2475"></div>
    </ul>
    <h3 class="heading settled" data-level="11.2" id="changes-2021-05-06"><span class="secno">11.2. </span><span class="content"> Since Proposed Recommendation of 6 May 2021 </span><a class="self-link" href="#changes-2021-05-06"></a></h3>
    <ul>
@@ -16473,6 +16503,7 @@ Zergaoui, Mohamed (INNOVIMAX)</p>
    <li><a href="#dom-audiobuffersourcenode-audiobuffersourcenode">AudioBufferSourceNode(context)</a><span>, in § 1.9.1</span>
    <li><a href="#dom-audiobuffersourcenode-audiobuffersourcenode">AudioBufferSourceNode(context, options)</a><span>, in § 1.9.1</span>
    <li><a href="#AudioBufferSourceOptions">AudioBufferSourceOptions</a><span>, in § 1.9.3</span>
+   <li><a href="#audio-buffer-underrun">audio buffer underrun</a><span>, in § 2.4</span>
    <li><a href="#AudioContext">AudioContext</a><span>, in § 1.1.7</span>
    <li><a href="#dom-audiocontext-audiocontext">AudioContext()</a><span>, in § 1.2.1</span>
    <li><a href="#dom-audiocontext-audiocontext">AudioContext(contextOptions)</a><span>, in § 1.2.1</span>
@@ -16933,6 +16964,7 @@ Zergaoui, Mohamed (INNOVIMAX)</p>
    <li><a href="#linear-pcm">linear PCM</a><span>, in § 5.1</span>
    <li><a href="#dom-audioparam-linearramptovalueattime">linearRampToValueAtTime(value, endTime)</a><span>, in § 1.6.2</span>
    <li><a href="#dom-baseaudiocontext-listener">listener</a><span>, in § 1.1.1</span>
+   <li><a href="#load-value">load value</a><span>, in § 2.4</span>
    <li>
     loop
     <ul>
@@ -17330,6 +17362,8 @@ Zergaoui, Mohamed (INNOVIMAX)</p>
    <li><a href="#dom-audiocontext-suspended-by-user-slot">[[suspended by user]]</a><span>, in § 1.2</span>
    <li><a href="#dom-offlineaudiocontext-suspend">suspend(suspendTime)</a><span>, in § 1.3.3</span>
    <li><a href="#swap">swap</a><span>, in § 2.2</span>
+   <li><a href="#system-level-audio-callback">system-level audio callback</a><span>, in § 2.4</span>
+   <li><a href="#system-level-audio-callback-buffer-size">system-level audio callback buffer size</a><span>, in § 2.4</span>
    <li><a href="#tail-time">tail-time</a><span>, in § 1.5.2</span>
    <li>
     threshold
@@ -19785,7 +19819,7 @@ The MediaStreamAudioSourceNode Interface</a>
     <li><a href="#ref-for-dom-baseaudiocontext-samplerate①①">1.25. 
 The MediaStreamTrackAudioSourceNode Interface</a>
     <li><a href="#ref-for-dom-baseaudiocontext-samplerate①②">2.4. 
-Rendering an Audio Graph</a>
+Rendering an Audio Graph</a> <a href="#ref-for-dom-baseaudiocontext-samplerate①③">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="--nyquist-frequency">
@@ -20244,14 +20278,14 @@ AudioWorklet Sequence of Events</a> <a href="#ref-for-AudioContext①②⑦">(2)
     <li><a href="#ref-for-AudioContext①②⑨">2.2. 
 Control Thread and Rendering Thread</a> <a href="#ref-for-AudioContext①③⓪">(2)</a> <a href="#ref-for-AudioContext①③①">(3)</a>
     <li><a href="#ref-for-AudioContext①③②">2.4. 
-Rendering an Audio Graph</a> <a href="#ref-for-AudioContext①③③">(2)</a>
-    <li><a href="#ref-for-AudioContext①③④">2.5. Unloading a document</a> <a href="#ref-for-AudioContext①③⑤">(2)</a>
-    <li><a href="#ref-for-AudioContext①③⑥">3.1. 
+Rendering an Audio Graph</a> <a href="#ref-for-AudioContext①③③">(2)</a> <a href="#ref-for-AudioContext①③④">(3)</a>
+    <li><a href="#ref-for-AudioContext①③⑤">2.5. Unloading a document</a> <a href="#ref-for-AudioContext①③⑥">(2)</a>
+    <li><a href="#ref-for-AudioContext①③⑦">3.1. 
 Background</a>
-    <li><a href="#ref-for-AudioContext①③⑦">7.1. 
+    <li><a href="#ref-for-AudioContext①③⑧">7.1. 
 Latency</a>
-    <li><a href="#ref-for-AudioContext①③⑧">8. 
-Security and Privacy Considerations</a> <a href="#ref-for-AudioContext①③⑨">(2)</a> <a href="#ref-for-AudioContext①④⓪">(3)</a> <a href="#ref-for-AudioContext①④①">(4)</a>
+    <li><a href="#ref-for-AudioContext①③⑨">8. 
+Security and Privacy Considerations</a> <a href="#ref-for-AudioContext①④⓪">(2)</a> <a href="#ref-for-AudioContext①④①">(3)</a> <a href="#ref-for-AudioContext①④②">(4)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="enumdef-audiocontextlatencycategory">
@@ -20526,8 +20560,8 @@ Constructors</a>
     <li><a href="#ref-for-OfflineAudioContext③⑥">2.2. 
 Control Thread and Rendering Thread</a>
     <li><a href="#ref-for-OfflineAudioContext③⑦">2.4. 
-Rendering an Audio Graph</a>
-    <li><a href="#ref-for-OfflineAudioContext③⑧">2.5. Unloading a document</a> <a href="#ref-for-OfflineAudioContext③⑨">(2)</a>
+Rendering an Audio Graph</a> <a href="#ref-for-OfflineAudioContext③⑧">(2)</a>
+    <li><a href="#ref-for-OfflineAudioContext③⑨">2.5. Unloading a document</a> <a href="#ref-for-OfflineAudioContext④⓪">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dom-offlineaudiocontext-offlineaudiocontext">
@@ -26372,7 +26406,7 @@ Control Thread and Rendering Thread</a> <a href="#ref-for-rendering-thread①③
     <li><a href="#ref-for-rendering-thread①⑥">2.3. 
 Asynchronous Operations</a> <a href="#ref-for-rendering-thread①⑦">(2)</a> <a href="#ref-for-rendering-thread①⑧">(3)</a>
     <li><a href="#ref-for-rendering-thread①⑨">2.4. 
-Rendering an Audio Graph</a>
+Rendering an Audio Graph</a> <a href="#ref-for-rendering-thread②⓪">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="control-message-queue">
@@ -26465,7 +26499,7 @@ Callback AudioWorkletProcessCallback Parameters </a> <a href="#ref-for-render-qu
    <b><a href="#render-quantum-size">#render-quantum-size</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-render-quantum-size">2.4. 
-Rendering an Audio Graph</a>
+Rendering an Audio Graph</a> <a href="#ref-for-render-quantum-size①">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="atomically">
@@ -26477,6 +26511,34 @@ Attributes</a>
 Processing</a>
     <li><a href="#ref-for-atomically②">2.4. 
 Rendering an Audio Graph</a> <a href="#ref-for-atomically③">(2)</a> <a href="#ref-for-atomically④">(3)</a>
+   </ul>
+  </aside>
+  <aside class="dfn-panel" data-for="system-level-audio-callback">
+   <b><a href="#system-level-audio-callback">#system-level-audio-callback</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-system-level-audio-callback">2.4. 
+Rendering an Audio Graph</a> <a href="#ref-for-system-level-audio-callback①">(2)</a> <a href="#ref-for-system-level-audio-callback②">(3)</a>
+   </ul>
+  </aside>
+  <aside class="dfn-panel" data-for="system-level-audio-callback-buffer-size">
+   <b><a href="#system-level-audio-callback-buffer-size">#system-level-audio-callback-buffer-size</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-system-level-audio-callback-buffer-size">2.4. 
+Rendering an Audio Graph</a> <a href="#ref-for-system-level-audio-callback-buffer-size①">(2)</a>
+   </ul>
+  </aside>
+  <aside class="dfn-panel" data-for="load-value">
+   <b><a href="#load-value">#load-value</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-load-value">2.4. 
+Rendering an Audio Graph</a> <a href="#ref-for-load-value①">(2)</a> <a href="#ref-for-load-value②">(3)</a>
+   </ul>
+  </aside>
+  <aside class="dfn-panel" data-for="audio-buffer-underrun">
+   <b><a href="#audio-buffer-underrun">#audio-buffer-underrun</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-audio-buffer-underrun">2.4. 
+Rendering an Audio Graph</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="baseaudiocontext-associated-task-queue">
