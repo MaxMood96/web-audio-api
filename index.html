@@ -5,10 +5,10 @@
   <title>Web Audio API 1.1</title>
   <meta content="ED" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
-  <meta content="Bikeshed version f5998b114, updated Tue Feb 18 08:22:15 2025 -0800" name="generator">
+  <meta content="Bikeshed version 60c422380, updated Thu Feb 20 19:11:22 2025 -0800" name="generator">
   <link href="https://www.w3.org/TR/webaudio-1.1/" rel="canonical">
   <link href="favicon.png" rel="icon">
-  <meta content="d5148c3b840039719152f64ba564059390fc7288" name="revision">
+  <meta content="dfcea383169de00fc0e70b8b428febf228684aa2" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>
@@ -1155,7 +1155,7 @@ var[data-var-color="6"] { --var-vg: #FFBCF2; }
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Web Audio API 1.1</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2025-02-18">18 February 2025</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2025-03-04">4 March 2025</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -3194,7 +3194,7 @@ returning <var>promise</var>.</p>
        <li data-md>
         <p>Set the <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-control-thread-state-slot" id="ref-for-dom-baseaudiocontext-control-thread-state-slot⑤">[[control thread state]]</a></code> on the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext④⑤">AudioContext</a></code> to <code>running</code>.</p>
        <li data-md>
-        <p><a data-link-type="dfn" href="#queuing" id="ref-for-queuing②">Queue a control message</a> to resume the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext④⑥">AudioContext</a></code>.</p>
+        <p><a data-link-type="dfn" href="#queuing" id="ref-for-queuing②">Queue a control message</a> to resume the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext④⑥">AudioContext</a></code> with <var>promise</var>.</p>
        <li data-md>
         <p>Return <var>promise</var>.</p>
       </ol>
@@ -3202,6 +3202,8 @@ returning <var>promise</var>.</p>
      <div class="algorithm" data-algorithm="run a control message in AudioContext" id="context-resume">
        Running a <a data-link-type="dfn" href="#control-message" id="ref-for-control-message⑤">control message</a> to resume an <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext④⑦">AudioContext</a></code> means running these steps on the <a data-link-type="dfn" href="#rendering-thread" id="ref-for-rendering-thread③">rendering thread</a>: 
       <ol>
+       <li data-md>
+        <p>Let <var>promise</var> be the promise passed into this algorithm.</p>
        <li data-md>
         <p>Attempt to <a href="#acquiring" id="ref-for-acquiring①">acquire system resources</a>.</p>
        <li data-md>
@@ -3225,7 +3227,7 @@ returning <var>promise</var>.</p>
           <p>Clear <code class="idl"><a data-link-type="idl" href="#dom-audiocontext-pending-resume-promises-slot" id="ref-for-dom-audiocontext-pending-resume-promises-slot④">[[pending resume promises]]</a></code>. Additionally, remove those
 promises from <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-pending-promises-slot" id="ref-for-dom-baseaudiocontext-pending-promises-slot⑤">[[pending promises]]</a></code>.</p>
          <li data-md>
-          <p>Resolve <em>promise</em>.</p>
+          <p>Resolve <var>promise</var>.</p>
          <li data-md>
           <p>If the <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-state" id="ref-for-dom-baseaudiocontext-state④">state</a></code> attribute of the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext④⑨">AudioContext</a></code> is not already "<code class="idl"><a data-link-type="idl" href="#dom-audiocontextstate-running" id="ref-for-dom-audiocontextstate-running⑤">running</a></code>":</p>
           <ol>
@@ -3267,7 +3269,7 @@ returning <var>promise</var>.</p>
        <li data-md>
         <p>Set the <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-control-thread-state-slot" id="ref-for-dom-baseaudiocontext-control-thread-state-slot⑦">[[control thread state]]</a></code> on the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext⑤⑥">AudioContext</a></code> to <code>suspended</code>.</p>
        <li data-md>
-        <p><a data-link-type="dfn" href="#queuing" id="ref-for-queuing③">Queue a control message</a> to suspend the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext⑤⑦">AudioContext</a></code>.</p>
+        <p><a data-link-type="dfn" href="#queuing" id="ref-for-queuing③">Queue a control message</a> to suspend the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext⑤⑦">AudioContext</a></code> with <var>promise</var>.</p>
        <li data-md>
         <p>Return <var>promise</var>.</p>
       </ol>
@@ -3276,6 +3278,8 @@ returning <var>promise</var>.</p>
        Running a <a data-link-type="dfn" href="#control-message" id="ref-for-control-message⑥">control message</a> to suspend an <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext⑤⑧">AudioContext</a></code> means running these steps on the <a data-link-type="dfn" href="#rendering-thread" id="ref-for-rendering-thread④">rendering thread</a>: 
       <ol>
        <li data-md>
+        <p>Let <var>promise</var> be the promise passed into this algorithm.</p>
+       <li data-md>
         <p>Attempt to <a data-link-type="dfn" href="#releasing" id="ref-for-releasing③">release system resources</a>.</p>
        <li data-md>
         <p>Set the <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-rendering-thread-state-slot" id="ref-for-dom-baseaudiocontext-rendering-thread-state-slot④">[[rendering thread state]]</a></code> on the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext⑤⑨">AudioContext</a></code> to <code>suspended</code>.</p>
@@ -3283,7 +3287,7 @@ returning <var>promise</var>.</p>
         <p><a href="https://html.spec.whatwg.org/multipage/media.html#queue-a-media-element-task" id="6d54a0c57"> queue a media element task</a> to execute the following steps:</p>
         <ol>
          <li data-md>
-          <p>Resolve <em>promise</em>.</p>
+          <p>Resolve <var>promise</var>.</p>
          <li data-md>
           <p>If the <code class="idl"><a data-link-type="idl" href="#dom-baseaudiocontext-state" id="ref-for-dom-baseaudiocontext-state⑥">state</a></code> attribute of the <code class="idl"><a data-link-type="idl" href="#AudioContext" id="ref-for-AudioContext⑥⓪">AudioContext</a></code> is not already "<code class="idl"><a data-link-type="idl" href="#dom-audiocontextstate-suspended" id="ref-for-dom-audiocontextstate-suspended②">suspended</a></code>":</p>
           <ol>
@@ -20690,7 +20694,12 @@ function hideRefHint(refHint) {
 function showRefHint(link) {
     if(link.classList.contains("dfn-link")) return;
     const url = link.getAttribute("href");
-    const ref = refsData[url];
+    const refHintKey = link.getAttribute("data-refhint-key");
+    let key = url;
+    if(refHintKey) {
+        key = refHintKey + "_" + url;
+    }
+    const ref = refsData[key];
     if(!ref) return;
 
     hideAllRefHints(); // Only display one at this time.
